@@ -3,7 +3,6 @@ Mobile-API for [Argus Vpn](https://argus-vpn.com/) which is an essential tool wh
 
 ## Example
 ```cs
-using System;
 using ArgusVpnApi;
 
 namespace Application
