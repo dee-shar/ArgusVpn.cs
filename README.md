@@ -1,8 +1,22 @@
-# jump_vpn.sh
-Mobile-API for [Jump VPN](https://play.google.com/store/apps/details?id=com.jump.first_business_project) which is an essential tool when it comes to Internet security. It encrypts your connection so that third parties cannot track your online activities, making it more secure than a typical proxy
+# ArgusVpn.cs
+Mobile-API for [Argus Vpn](https://argus-vpn.com/) which is an essential tool when it comes to Internet security. It encrypts your connection so that third parties cannot track your online activities, making it more secure than a typical proxy
 
 ## Example
-```bash
-source ./jump_vpn.sh
-get_servers
+```cs
+using System;
+using ArgusVpnApi;
+
+namespace Application
+{
+    internal class Program
+    {
+        static async Task Main()
+        {
+            var api = new ArgusVpn();
+            await api.Login("example@gmail.com", "password"));
+            string servers = await api.GetServers();
+            Console.WriteLine(servers);
+        }
+    }
+}
 ```
