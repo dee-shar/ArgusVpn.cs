@@ -14,7 +14,7 @@ namespace ArgusVpnApi
         public ArgusVpn()
         {
             httpClient = new HttpClient();
-            httpClient.DefaultRequestHeaders.TryAddWithoutValidation("User-Agent", "Dart/2.19 (dart:io)");
+            httpClient.DefaultRequestHeaders.UserAgent.ParseAdd("User-Agent", "Dart/2.19 (dart:io)");
             httpClient.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
         }
